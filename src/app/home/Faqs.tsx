@@ -27,11 +27,11 @@ const faqsDetails = [
 
 function Faqs() {
   return (
-    <section className="mb-32">
-      <div className="text-xl text-white font-bold capitalize mb-20 text-center">
+    <section className="md:mb-32 mb-14">
+      <div className="md:text-xl text-2xl text-white font-bold capitalize md:mb-20 mb-10 text-center">
         AI Art Generator FAQs
       </div>
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col md:gap-12 gap-5">
         {faqsDetails.map((item, index) => (
           <div key={index}>
             <FaqsProps {...item} key={index} />

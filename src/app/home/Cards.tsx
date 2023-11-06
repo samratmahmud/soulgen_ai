@@ -3,7 +3,7 @@ import {url} from "inspector";
 import Link from "next/link";
 import React from "react";
 
-const cardProps = [
+const cardsData = [
   {
     title: "Customize Your Anime Art",
     contain:
@@ -39,12 +39,12 @@ const cardProps = [
 function Cards() {
   return (
     <section>
-      <div className="flex flex-col gap-44 group mb-40">
-        {cardProps.map(
+      <div className="flex flex-col gap-44 mb-40">
+        {cardsData.map(
           ({title, contain, contain2, thumbneil, button}, index) => (
             <div
               key={index}
-              className="flex gap-36 group-even:flex-row-reverse"
+              className="flex gap-6  justify-between even:flex-row-reverse"
             >
               <div className="md:max-w-[743px]">
                 <div className="text-xl font-semibold capitalize text-white mb-6">

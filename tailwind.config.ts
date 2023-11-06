@@ -28,6 +28,7 @@ const config: Config = {
       base: ["18px", {lineHeight: "1.78em"}],
       lg: ["20px", {lineHeight: "1.75em", letterSpacing: "0.02em"}],
       xl: ["48px", {lineHeight: "1em", letterSpacing: "0.02em"}],
+      "2xl": ["28px", {lineHeight: "0.6em", letterSpacing: "0.02em"}],
     },
     shadows: "",
     fontFamily: {roboto: ["'Roboto'", ...fontFamily.sans]},
@@ -47,7 +48,7 @@ const config: Config = {
     screens: {
       sm: "600px",
       md: "768px",
-      lg: "1100px",
+      lg: "1080px",
       xl: "1480px",
     },
   },

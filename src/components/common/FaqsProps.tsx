@@ -15,14 +15,14 @@ function FaqsProps(props: faqsDetails) {
   return (
     <div>
       <div
-        className={`flex justify-between gap-5 items-center ${
-          open ? "mb-4" : ""
+        className={`flex justify-between gap-4 items-center ${
+          open ? "md:mb-4 mb-1" : ""
         }`}
       >
-        <div className="text-lg text-white font-semibold capitalize">
+        <div className="md:text-lg text-md text-white font-semibold capitalize">
           {name}
         </div>
-        <div onClick={handelClick}>
+        <div onClick={handelClick} className="flex-shrink-0">
           <img
             src={`${open ? "/images/minac.svg" : "/images/plus icon 1.svg"}`}
             alt=""
@@ -31,7 +31,7 @@ function FaqsProps(props: faqsDetails) {
       </div>
       <div
         onClick={handelClick}
-        className="text-md text-white font-light capitalize"
+        className="md:text-md text-sm text-white font-light capitalize"
       >
         {`${open ? `${title}` : ""}`}
       </div>
