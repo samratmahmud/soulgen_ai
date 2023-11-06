@@ -26,15 +26,15 @@ const steps = [
 
 function GeneratStep() {
   return (
-    <section className="mb-40">
-      <div className="text-xl text-white font-bold capitalize mb-2 text-center">
+    <section className="md:mb-40 mb-16">
+      <div className="md:text-xl text-2xl text-white font-bold capitalize mb-2 text-center">
         How to Get AI Generated Images in 3 Steps?
       </div>
-      <div className="text-md text-white font-light capitalize mb-12 text-center">
+      <div className="text-md text-white font-light capitalize md:mb-12 mb-7 text-center">
         SoulGen AI Art Generator comes with easy-to-use and user-friendly
         interface. Make AI generated images in 3 steps:
       </div>
-      <div className="flex gap-3 items-center pt-9 pb-10 px-4 justify-center bg-slate-900 rounded-[20px]">
+      <div className="flex md:flex-row flex-col md:gap-3 gap-6 items-center md:pt-9 md:pb-10 py-8 px-4 justify-center bg-slate-900 rounded-[20px]">
         {steps.map(({thumbneil, number, title, iconPic}, index) => (
           <div key={index}>
             <div className="flex flex-col gap-2 items-center text-center">

@@ -27,7 +27,7 @@ const faqsDetails = [
 
 function Faqs() {
   return (
-    <section className="md:mb-32 mb-14">
+    <section className="md:mb-36 mb-16">
       <div className="md:text-xl text-2xl text-white font-bold capitalize md:mb-20 mb-10 text-center">
         AI Art Generator FAQs
       </div>

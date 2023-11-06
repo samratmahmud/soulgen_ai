@@ -52,16 +52,16 @@ const pictureGroup = [
 function PicShowcase() {
   return (
     <section>
-      <div className="flex flex-col gap-40 mb-40">
+      <div className="flex flex-col md:gap-40 gap-16 md:mb-40 mb-16">
         {pictureGroup.map(({title, thumbneil, button}, index) => (
           <div key={index} className="flex flex-col gap-8">
-            <div className="text-xl font-bold text-white text-center capitalize">
+            <div className="md:text-xl text-2xl font-bold text-white text-center capitalize">
               {title}
             </div>
-            <div className="grid grid-cols-5 gap-6">
+            <div className="grid lg:grid-cols-5 md:grid-cols-3 md:gap-6 gap-4">
               {thumbneil.map((item) => (
                 <div className="">
-                  <img src={item} alt="" />
+                  <img className="w-full" src={item} alt="" />
                 </div>
               ))}
             </div>

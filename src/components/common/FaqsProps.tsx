@@ -22,7 +22,7 @@ function FaqsProps(props: faqsDetails) {
         <div className="md:text-lg text-md text-white font-semibold capitalize">
           {name}
         </div>
-        <div onClick={handelClick} className="flex-shrink-0">
+        <div onClick={handelClick} className="flex-shrink-0 cursor-pointer">
           <img
             src={`${open ? "/images/minac.svg" : "/images/plus icon 1.svg"}`}
             alt=""

@@ -11,10 +11,10 @@ function Buttons(props: buttonProps) {
     <div className="inline-block">
       <div
         role="button"
-        className="flex items-center gap-2.5 py-5 px-8 bg-200 hover:bg-300 rounded-full focus:scale-105 duration-300"
+        className="flex items-center gap-2.5 md:py-5 py-3 md:px-8 px-5 bg-200 hover:bg-300 rounded-full focus:scale-105 duration-300"
         tabIndex={-1}
       >
-        <div className="text-white text-md">{name}</div>
+        <div className="text-white md:text-md text-sm">{name}</div>
         <div>
           <img src={icon} alt="" />
         </div>

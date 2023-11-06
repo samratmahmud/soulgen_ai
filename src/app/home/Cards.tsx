@@ -39,21 +39,21 @@ const cardsData = [
 function Cards() {
   return (
     <section>
-      <div className="flex flex-col gap-44 mb-40">
+      <div className="flex flex-col md:gap-44 gap-20 md:mb-40 mb-16">
         {cardsData.map(
           ({title, contain, contain2, thumbneil, button}, index) => (
             <div
               key={index}
-              className="flex gap-6  justify-between even:flex-row-reverse"
+              className="flex lg:flex-row flex-col gap-6  justify-between lg:even:flex-row-reverse"
             >
               <div className="md:max-w-[743px]">
-                <div className="text-xl font-semibold capitalize text-white mb-6">
+                <div className="md:text-xl text-2xl font-semibold capitalize text-white mb-6">
                   {title}
                 </div>
-                <div className="text-base font-light capitalize text-white">
+                <div className="md:text-base text-md font-light capitalize text-white">
                   {contain}
                 </div>
-                <div className="text-base font-light capitalize text-white mb-8">
+                <div className="md:text-base text-md font-light capitalize text-white mb-8">
                   {contain2}
                 </div>
                 <div>
@@ -65,7 +65,7 @@ function Cards() {
                 </div>
               </div>
               <div>
-                <img src={thumbneil} alt="" />
+                <img className="w-full" src={thumbneil} alt="" />
               </div>
             </div>
           )
