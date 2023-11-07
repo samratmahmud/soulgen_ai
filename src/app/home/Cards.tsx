@@ -58,7 +58,7 @@ function Cards() {
                 </div>
                 <div>
                   {button.map(({name, icon, url}) => (
-                    <Link href={url}>
+                    <Link href={url} className="inline-block">
                       <Buttons name={name} icon={icon} />
                     </Link>
                   ))}

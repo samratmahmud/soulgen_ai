@@ -3,6 +3,9 @@ import Link from "next/link";
 import React from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
+import Buttons from "../common/Buttons";
+import LoginFile from "../template/LoginFile";
+import SingupFile from "../template/SingupFile";
 
 const navLink = [
   {
@@ -47,24 +50,8 @@ function Navbar() {
         </div>
         <div className="hidden md:block">
           <div className="flex gap-3 items-center">
-            <div>
-              <p
-                role="button"
-                className="text-sm font-medium text-white py-2.5 px-4 bg-slate-300/10 rounded-full hover:bg-slate-800 duration-300"
-              >
-                Log in
-              </p>
-              <p></p>
-            </div>
-            <div>
-              <p
-                role="button"
-                className="text-sm font-medium text-slate-950 py-2.5 px-4 bg-gray-200 rounded-full hover:bg-slate-100 duration-300 focus:scale-90"
-              >
-                Sing in
-              </p>
-              <p></p>
-            </div>
+            <LoginFile />
+            <SingupFile />
           </div>
         </div>
         <div onClick={toggle} className="w-9 h-9 md:hidden">
