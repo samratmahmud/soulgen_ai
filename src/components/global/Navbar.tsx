@@ -4,8 +4,8 @@ import React from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import Buttons from "../common/Buttons";
-import LoginFile from "../template/LoginFile";
-import SingupFile from "../template/SingupFile";
+import LoginFile from "../common/LoginFile";
+import SingupFile from "../common/SingupFile";
 
 const navLink = [
   {
