@@ -5,10 +5,9 @@ interface InputBoxProps
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   > {
-  classNalabel?: string;
+  className?: string;
   sizes?: "input" | "others";
-  text?: string;
-  label?: string;
+  title?: string;
 }
 
 function InputBox(props: InputBoxProps) {
@@ -17,31 +16,31 @@ function InputBox(props: InputBoxProps) {
     id,
     placeholder,
     className,
-    text,
-    label,
+    title,
     sizes = "input",
     ...rest
   } = props;
   return (
-    <div
-      className={`${className} ${
+    <label
+      className={`${
         sizes === "input"
           ? "w-full"
-          : "flex items-center justify-between gap-3 w-full"
+          : "flex items-center justify-between gap-3 w-full text-sm font-medium py-2 px-3 border-2 border-gray-300 rounded-md"
       }`}
     >
-      <label htmlFor={id}>{text}</label>
+      <p>{title}</p>
+
       <input
         className={`${
           sizes === "input"
-            ? "w-full border-2 border-gray-300 py-2 px-3 rounded-md focus:outline-none focus:border-gray-400"
+            ? "w-full border-2 border-slate-200 py-1.5 px-3 rounded-md focus:outline-none focus:border-gray-300 md:font-medium font-normal"
             : ""
         }`}
         type={type}
         placeholder={placeholder}
         {...rest}
       />
-    </div>
+    </label>
   );
 }
 

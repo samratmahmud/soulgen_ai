@@ -81,9 +81,7 @@ function Navbar() {
                 ))}
               </div>
               <div className="flex flex-col gap-5 items-center">
-                <div className="text-sm font-medium text-white py-2.5 px-10 bg-slate-300/10 rounded-full hover:bg-slate-800 duration-300">
-                  Log in
-                </div>
+                <LoginFile />
                 <div className="text-sm font-medium text-slate-950 py-2.5 px-12 bg-gray-200 rounded-full hover:bg-slate-100 duration-300 focus:scale-90">
                   Sing in
                 </div>
