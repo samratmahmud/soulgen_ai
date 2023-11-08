@@ -1,5 +1,6 @@
 import type {Metadata} from "next";
 import "@/style/globals.css";
+import Layout from "@/components/global/Layout";
 
 export const metadata: Metadata = {
   title: "SoulGen_Ai",
@@ -9,7 +10,9 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }

@@ -8,16 +8,13 @@ import Footer from "./home/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-slate-950">
-      <div className="container">
-        <Navbar />
-        <Header />
-        <Cards />
-        <PictureShowcase />
-        <GeneratStep />
-        <Faqs />
-        <Footer />
-      </div>
-    </main>
+    <div>
+      <Header />
+      <Cards />
+      <PictureShowcase />
+      <GeneratStep />
+      <Faqs />
+      <Footer />
+    </div>
   );
 }
