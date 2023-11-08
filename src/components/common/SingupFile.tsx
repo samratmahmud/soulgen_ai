@@ -1,8 +1,15 @@
 import Link from "next/link";
 import React from "react";
 import InputBox from "../template/InputBox";
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 
-function SingupFile() {
+interface sizeProps {
+  size?: "Desktop" | "Mobile";
+}
+
+function SingupFile(props: sizeProps) {
+  const {size = "Desktop"} = props;
   const [isOpen, setIsOpen] = React.useState(false);
   let toggle = () => {
     setIsOpen((prev) => !prev);
@@ -14,15 +21,19 @@ function SingupFile() {
         onClick={toggle}
         href=""
         role="button"
-        className="text-sm font-medium text-slate-950 py-2.5 px-4 bg-gray-200 rounded-full hover:bg-slate-100 duration-300 focus:scale-90"
+        className={`${
+          size === "Desktop"
+            ? "text-sm font-medium text-slate-950 py-2.5 px-4 bg-gray-200 rounded-full hover:bg-slate-100 duration-300 focus:scale-90"
+            : "text-sm font-medium text-slate-950 py-2.5 px-12 bg-gray-200 rounded-full hover:bg-slate-100 duration-300 focus:scale-90"
+        }`}
       >
         Sing in
       </Link>
       {isOpen && (
-        <div className="duration-300 absolute md:w-[420px] w-[80%] right-0 translate-y-4 bg-gray-100 rounded-lg py-5 px-4">
-          <div className="text-xl mb-6 font-semibold">Sign Up</div>
+        <div className="duration-300 absolute md:w-[420px] w-[250px] right-0 translate-y-4 md:translate-x-0 translate-x-[21%] bg-gray-100 rounded-lg md:py-5 py-3 md:px-4 px-2">
+          <div className="md:text-xl text-2xl mb-6 font-semibold">Sign Up</div>
           <div>
-            <div className="flex gap-2 mb-2">
+            <div className="flex md:flex-row flex-col gap-2 mb-2">
               <InputBox className="" type="text" placeholder="First Name" />
               <InputBox className="" type="text" placeholder="Last Name" />
             </div>
@@ -43,7 +54,7 @@ function SingupFile() {
           </div>
           <div className="mb-7">
             <div className="text-md font-semibold mb-1">Gender</div>
-            <div className="flex gap-1.5">
+            <div className="flex md:gap-1.5 gap-0.5">
               <InputBox
                 sizes="others"
                 title="Female"
@@ -68,7 +79,7 @@ function SingupFile() {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="w-1/2 text-md font-semibold text-white py-2 px-6 bg-green-600 hover:bg-green-500 duration-300 rounded-lg">
+            <button className="md:w-1/2 text-md font-semibold text-white md:py-2 py-1 px-8 bg-green-600 hover:bg-green-500 duration-300 rounded-lg">
               Sign Up
             </button>
           </div>

@@ -12,7 +12,8 @@
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-modern-drawer": "^1.2.2"
+    "react-modern-drawer": "^1.2.2",
+    "simplebar-react": "^3.2.4"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -25,10 +25,10 @@ function InputBox(props: InputBoxProps) {
       className={`${
         sizes === "input"
           ? "w-full"
-          : "flex items-center justify-between gap-3 w-full text-sm font-medium py-2 px-3 border-2 border-gray-300 rounded-md"
+          : "flex items-center justify-between gap-3 w-full text-sm font-medium md:py-2 py-1 md:px-3 px-1.5 border-2 border-gray-300 rounded-md"
       }`}
     >
-      <p>{title}</p>
+      <p className="md:text-sm text-xs">{title}</p>
 
       <input
         className={`${

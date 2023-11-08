@@ -6,6 +6,7 @@ import "react-modern-drawer/dist/index.css";
 import Buttons from "../common/Buttons";
 import LoginFile from "../common/LoginFile";
 import SingupFile from "../common/SingupFile";
+import SimpleBar from "simplebar-react";
 
 const navLink = [
   {
@@ -59,38 +60,43 @@ function Navbar() {
         </div>
       </div>
       <div className="md:hidden">
-        <Drawer open={isOpen} onClose={toggle} direction="left">
-          <div className="bg-slate-900 p-5 h-full flex flex-col justify-between">
-            <div>
-              <Link href="/" className="flex justify-center mb-10">
-                <img src="/images/Frame (1).svg" alt="" />
-              </Link>
-              <div className="flex flex-col gap-2 mb-5">
-                {navLink.map(({name, url}, index) => (
-                  <div
-                    key={index}
-                    className="py-2.5 bg-slate-800 hover:bg-slate-950 duration-300 text-center rounded-lg"
-                  >
-                    <Link
-                      href={url}
-                      className="text-white font-medium text-md hover:underline"
+        <Drawer
+          open={isOpen}
+          onClose={toggle}
+          direction="left"
+          style={{width: "75%"}}
+        >
+          <SimpleBar style={{height: "100%", backgroundColor: "#030423"}}>
+            <div className="bg-slate-900 p-5 h-screen flex flex-col justify-between">
+              <div>
+                <Link href="/" className="flex justify-center mb-10">
+                  <img src="/images/Frame (1).svg" alt="" />
+                </Link>
+                <div className="flex flex-col gap-2 mb-5">
+                  {navLink.map(({name, url}, index) => (
+                    <div
+                      key={index}
+                      className="py-2.5 bg-slate-800 hover:bg-slate-950 duration-300 text-center rounded-lg"
                     >
-                      {name}
-                    </Link>
-                  </div>
-                ))}
-              </div>
-              <div className="flex flex-col gap-5 items-center">
-                <LoginFile />
-                <div className="text-sm font-medium text-slate-950 py-2.5 px-12 bg-gray-200 rounded-full hover:bg-slate-100 duration-300 focus:scale-90">
-                  Sing in
+                      <Link
+                        href={url}
+                        className="text-white font-medium text-md hover:underline"
+                      >
+                        {name}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-col gap-7 items-center">
+                  <LoginFile size="Mobile" />
+                  <SingupFile size="Mobile" />
                 </div>
               </div>
+              <div className="flex justify-center">
+                <img src="/images/Frame.svg" alt="" />
+              </div>
             </div>
-            <div className="flex justify-center">
-              <img src="/images/Frame.svg" alt="" />
-            </div>
-          </div>
+          </SimpleBar>
         </Drawer>
       </div>
     </nav>
