@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import InputBox from "../template/InputBox";
+import InputBox from "./InputBox";
 
 interface sizeProps {
   size?: "Desktop" | "Mobile";

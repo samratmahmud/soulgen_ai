@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import InputBox from "../template/InputBox";
+import InputBox from "./InputBox";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 

@@ -3,9 +3,8 @@ import Link from "next/link";
 import React from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
-import Buttons from "../common/Buttons";
-import LoginFile from "../common/LoginFile";
-import SingupFile from "../common/SingupFile";
+import LoginFile from "./navbarInputFile/LoginFile";
+import SingupFile from "./navbarInputFile/SingupFile";
 import SimpleBar from "simplebar-react";
 
 const navLink = [
@@ -31,7 +30,7 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="flex justify-between items-center pt-7 mb-9 ">
+      <div className="flex justify-between items-center py-7 mb-5 bg-slate-950">
         <Link href="/">
           <img src="/images/Frame (1).svg" alt="" />
         </Link>
